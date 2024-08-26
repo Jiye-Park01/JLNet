@@ -44,7 +44,8 @@ class JLNet_train(base_train):
         """
 
         self.writer = SummaryWriter(
-            '{}/{}_kv_cross_vali0{}'.format(self.logs_name, datetime.now(), w_num))
+            '{}/{}_kv_cross_vali0{}'.format(self.logs_name, datetime.now().strftime('%Y-%m-%d_%H-%M-%S'), w_num))
+
         if train_id is None:
             train_id = [1, 2, 3, 4]
             test_id = [5]
@@ -285,14 +286,14 @@ if __name__=='__main__':
 
     elif args.datatype == 'kfw2':
         print('start training on kfw2')
-        train_ls = ['/home/wei/Documents/DATA/kinship/KinFaceW-II/meta_data/fd_pairs.mat',
-                    '/home/wei/Documents/DATA/kinship/KinFaceW-II/meta_data/fs_pairs.mat',
-                    '/home/wei/Documents/DATA/kinship/KinFaceW-II/meta_data/md_pairs.mat',
-                    '/home/wei/Documents/DATA/kinship/KinFaceW-II/meta_data/ms_pairs.mat']
-        data_pth = ['/home/wei/Documents/DATA/kinship/KinFaceW-II/images/father-dau',
-                    '/home/wei/Documents/DATA/kinship/KinFaceW-II/images/father-son',
-                    '/home/wei/Documents/DATA/kinship/KinFaceW-II/images/mother-dau',
-                    '/home/wei/Documents/DATA/kinship/KinFaceW-II/images/mother-son']
+        train_ls = ['C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/meta_data/fd_pairs.mat',
+                    'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/meta_data/fs_pairs.mat',
+                    'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/meta_data/md_pairs.mat',
+                    'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/meta_data/ms_pairs.mat']
+        data_pth = ['C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/images/father-dau',
+                    'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/images/father-son',
+                    'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/images/mother-dau',
+                    'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-II/images/mother-son']
         JLNet_config.kin_config.data_name = 'kfw2'
         JLNet_config.kin_config.epoch_num = 230
         JLNet_config.kin_config.loss_ratio = 0.3

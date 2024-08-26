@@ -103,7 +103,7 @@ class base_train(object):
         run cross validation and save
         :return:
         """
-        with SummaryWriter('{}/{}_kv_cross_description'.format(self.logs_name, datetime.now())) as ww:
+        with SummaryWriter('{}/{}_kv_cross_description'.format(self.logs_name, datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))) as ww:
             ww.add_text('{}_{}_parameters'.format(self.logs_name, self.model_name),
                         '{}'.format(self.description).replace(',', '<br />'))
 
@@ -130,7 +130,7 @@ class base_train(object):
 
 
         self.writer = SummaryWriter(
-            '{}/{}_kv_cross_vali0{}'.format(self.logs_name, datetime.now(),w_num))
+            '{}/{}_kv_cross_vali0{}'.format(self.logs_name, datetime.now().strftime('%Y-%m-%d_%H-%M-%S'), w_num))
         if train_id is None:
             train_id = [1, 2, 3, 4]
             test_id = [5]

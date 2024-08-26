@@ -16,15 +16,15 @@ class kin_config(object):
     data_name = 'kfw1'
     kintype  = 'all'
     ## list path
-    list_path = ['/home/wei/Documents/DATA/kinship/KinFaceW-I/meta_data/fd_pairs.mat',
-                '/home/wei/Documents/DATA/kinship/KinFaceW-I/meta_data/fs_pairs.mat',
-                '/home/wei/Documents/DATA/kinship/KinFaceW-I/meta_data/md_pairs.mat',
-                '/home/wei/Documents/DATA/kinship/KinFaceW-I/meta_data/ms_pairs.mat']
+    list_path = ['C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/meta_data/fd_pairs.mat',
+                'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/meta_data/fs_pairs.mat',
+                'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/meta_data/md_pairs.mat',
+                'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/meta_data/ms_pairs.mat']
     ## data path
-    img_root  = ['/home/wei/Documents/DATA/kinship/KinFaceW-I/images/father-dau',
-                '/home/wei/Documents/DATA/kinship/KinFaceW-I/images/father-son',
-                '/home/wei/Documents/DATA/kinship/KinFaceW-I/images/mother-dau',
-                '/home/wei/Documents/DATA/kinship/KinFaceW-I/images/mother-son']
+    img_root  = ['C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/images/father-dau',
+                'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/images/father-son',
+                'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/images/mother-dau',
+                'C:/Users/82102/Desktop/paper/Kinface/KinFaceW-I/images/mother-son']
     ## dataset
     Dataset =  KinDataset_condufusion2
     ## transformer
